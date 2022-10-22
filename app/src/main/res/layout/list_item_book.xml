@@ -31,9 +31,17 @@
                 android:text="Book Name"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/imgBook"
                 android:layout_marginTop="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_down_arrow"
+                android:layout_below="@+id/imgBook"
+                android:layout_marginTop="7dp"
+                android:id="@+id/btnDownArrow"
+                android:layout_alignParentEnd="true"/>
+
 
         </RelativeLayout>
 
