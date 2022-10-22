@@ -29,5 +29,9 @@ public class AllBooksActivity extends AppCompatActivity {
         books.add(new Book(1, "1Q84", "Haruki Murakami", 1350, "https://jameskennedymonash.files.wordpress.com/2013/01/1q84-cover.jpg",
                 "A work of maddening brilliance.", "Long description."));
         adapter.setBooks(books);
+
+        books.add(new Book(2, "The Myth of Sisyphus", "Albert Camus", 250, "https://pictures.abebooks.com/BOOKFEATHERSLLC/md/md10422277344.jpg",
+                "One of the most influential works of this century, this is a crucial exposition of existentialist thought.", "Long description."));
+        adapter.setBooks(books);
     }
 }
