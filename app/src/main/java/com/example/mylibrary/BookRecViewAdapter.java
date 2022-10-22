@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.transition.TransitionManager;
 
 import com.bumptech.glide.Glide;
 
@@ -50,6 +51,19 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
                 Toast.makeText(mContext, books.get(position).getName() + " Selected", Toast.LENGTH_SHORT).show();
             }
         });
+
+        holder.txtAuthor.setText(books.get(position).getAuthor());
+        holder.txtDescription.setText(books.get(position).getShortDesc());
+
+        if (books.get(position).isExpanded()) {
+            TransitionManager.beginDelayedTransition(holder.parent);
+            holder.expandedRelLayout.setVisibility(View.VISIBLE);
+            holder.downArrow.setVisibility(View.GONE);
+        } else {
+            TransitionManager.beginDelayedTransition(holder.parent);
+            holder.expandedRelLayout.setVisibility(View.GONE);
+            holder.downArrow.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
